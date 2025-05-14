@@ -33,29 +33,25 @@ root/
 - Node.js (version 16+)
 - Docker and Docker Compose
 
-### 1. Start the Database
+### 1. Start the Database and Run the Backend (Java + Spring Boot)
 
 ```bash
+cd backend
 docker-compose up -d
 ```
 
 This command will start a PostgreSQL container with the configurations defined in `docker-compose.yml`.
+And also start the Backend application
 
-### 2. Run the Backend (Java + Spring Boot)
-
-```bash
-cd backend
-./mvnw spring-boot:run
-```
-
-**Note: Check the `application.properties` or `application.yml` file to confirm the PostgreSQL connection URL.
+**Note: Check the `application.yml` file to confirm the PostgreSQL connection URL.
 
 ### 3. Run the Frontend (React.js)
 
 ```bash
+cd ..
 cd frontend
 npm install
-npm start
+npm run dev
 ```
 
 The application will be started at `http://localhost:5173`.

@@ -11,7 +11,7 @@
     <groupId>com.jleite</groupId>
     <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-backend</name>
+    <name>backend</name>
     <description>spring-boot-backend</description>
     <url/>
     <licenses>
