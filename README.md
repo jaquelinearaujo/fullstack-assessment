@@ -38,7 +38,12 @@ root/
 git clone https://github.com/jaquelinearaujo/fullstack-assessment.git
 ```
 
-### 2. Start the Database and Run the Backend (Java + Spring Boot)
+### 2. Navigate to the project directory:
+```bash
+cd fullstack-assessment
+```
+
+### 3. Start the Database and Run the Backend (Java + Spring Boot)
 
 ```bash
 cd backend
@@ -50,7 +55,7 @@ And also start the Backend application
 
 **Note: Check the `application.yml` file to confirm the PostgreSQL connection URL.
 
-### 3. Run the Frontend (React.js)
+### 4. Run the Frontend (React.js)
 
 ```bash
 cd ..
