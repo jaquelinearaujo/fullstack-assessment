@@ -2,7 +2,7 @@ spring:
   application:
     name: catalog
   datasource:
-    url: jdbc:postgresql://localhost:5432/catalog
+    url: jdbc:postgresql://postgres:5432/catalog
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
@@ -14,4 +14,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-
