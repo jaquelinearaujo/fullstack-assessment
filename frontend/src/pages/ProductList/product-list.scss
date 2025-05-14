@@ -1,0 +1,147 @@
+@use '../../styles/_variables.scss' as vars;
+
+.product-list {
+  &-container {
+    padding: vars.$spacing-md;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &-title {
+    text-align: center;
+    margin-bottom: vars.$spacing-md;
+    color: vars.$text-color;
+  }
+
+  &-filter {
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: vars.$spacing-sm;
+      margin-bottom: vars.$spacing-md;
+      padding: vars.$spacing-sm;
+      background-color: vars.$light-gray;
+      border-radius: vars.$border-radius-sm;
+    }
+
+    &-search {
+      display: flex;
+      flex: 1 1 250px;
+
+      &-input {
+        flex: 1;
+        padding: vars.$spacing-sm;
+        border-radius: vars.$border-radius-sm 0 0 vars.$border-radius-sm;
+        border: 1px solid vars.$light-gray;
+        font-size: vars.$font-sm;
+      }
+    }
+
+    &-button, &-reset {
+      padding: vars.$spacing-sm vars.$spacing-md;
+      font-size: vars.$font-sm;
+      border-radius: vars.$border-radius-sm;
+      cursor: pointer;
+    }
+
+    &-button {
+      background-color: vars.$primary-color;
+      color: vars.$white;
+      &:hover {
+        background-color: color-mix(in srgb, vars.$primary-color, black 10%);
+      }
+    }
+
+    &-reset {
+      background-color: vars.$danger-color;
+      color: vars.$white;
+      &:hover {
+        background-color: color-mix(in srgb, vars.$danger-color, black 10%);
+      }
+    }
+  }
+
+  &-error, &-loading, &-empty {
+    text-align: center;
+    padding: vars.$spacing-md;
+    font-size: vars.$font-md;
+    color: vars.$text-secondary;
+    margin-bottom: vars.$spacing-md;
+  }
+
+  &-add {
+    &-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: vars.$spacing-md;
+    }
+
+    &-button {
+      padding: vars.$spacing-sm vars.$spacing-lg;
+      background-color: vars.$primary-color;
+      color: vars.$white;
+      text-decoration: none;
+      border-radius: vars.$border-radius-sm;
+      font-size: vars.$font-sm;
+      &:hover {
+        background-color: color-mix(in srgb, vars.$primary-color, black 10%);
+      }
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: vars.$spacing-md;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: vars.$border-radius-sm;
+    box-shadow: vars.$box-shadow;
+    overflow: hidden;
+
+    &-image {
+      &-container {
+        height: 200px;
+        background-color: vars.$light-gray;
+      }
+
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-info {
+      padding: vars.$spacing-sm;
+      background-color: vars.$white;
+      flex: 1;
+    }
+
+    &-name {
+      font-size: vars.$font-md;
+      color: vars.$text-color;
+    }
+
+    &-price {
+      font-weight: bold;
+      color: vars.$primary-color;
+      font-size: vars.$font-sm;
+    }
+
+    &-view {
+      display: inline-block;
+      width: 100%;
+      padding: vars.$spacing-sm 0;
+      background-color: vars.$secondary-color;
+      color: vars.$white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: vars.$border-radius-sm;
+      font-size: vars.$font-xs;
+    }
+  }
+}

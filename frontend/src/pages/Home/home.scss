@@ -1,0 +1,124 @@
+@use '../../styles/_variables.scss' as vars;
+
+.home {
+  &-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: vars.$spacing-xl;
+  }
+
+  &-hero {
+    text-align: center;
+    padding: vars.$spacing-xxl vars.$spacing-md;
+    background-color: vars.$light-gray;
+    border-radius: vars.$border-radius-md;
+    margin-bottom: vars.$spacing-xxl;
+
+    &-title {
+      font-size: vars.$font-xxl;
+      color: vars.$text-color;
+      margin-bottom: vars.$spacing-md;
+    }
+
+    &-subtitle {
+      font-size: vars.$font-md;
+      color: vars.$text-secondary;
+      max-width: 800px;
+      margin: 0 auto vars.$spacing-xl;
+    }
+  }
+
+  &-button {
+    &-container {
+      display: flex;
+      justify-content: center;
+      gap: vars.$spacing-md;
+      flex-wrap: wrap;
+    }
+
+    &-primary {
+      display: inline-block;
+      padding: vars.$spacing-sm vars.$spacing-lg;
+      background-color: vars.$primary-color;
+      color: vars.$white;
+      text-decoration: none;
+      border-radius: vars.$border-radius-sm;
+      font-size: vars.$font-sm;
+      font-weight: bold;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: color-mix(in srgb, vars.$primary-color, black 10%);
+      }
+    }
+
+    &-secondary {
+      display: inline-block;
+      padding: vars.$spacing-sm vars.$spacing-lg;
+      background-color: vars.$secondary-color;
+      color: vars.$white;
+      text-decoration: none;
+      border-radius: vars.$border-radius-sm;
+      font-size: vars.$font-sm;
+      font-weight: bold;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: color-mix(in srgb, vars.$secondary-color, black 10%);
+      }
+    }
+  }
+
+  &-features {
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: vars.$spacing-xl;
+      margin-bottom: vars.$spacing-xxl;
+    }
+
+    &-item {
+      background-color: vars.$white;
+      padding: vars.$spacing-xl;
+      border-radius: vars.$border-radius-md;
+      box-shadow: vars.$box-shadow;
+      text-align: center;
+
+      &-icon {
+        font-size: 3rem;
+        margin-bottom: vars.$spacing-md;
+      }
+
+      &-title {
+        font-size: vars.$font-lg;
+        color: vars.$text-color;
+        margin-bottom: vars.$spacing-md;
+      }
+
+      &-description {
+        color: vars.$text-secondary;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  &-welcome {
+    &-back {
+      background-color: vars.$success-bg;
+      padding: vars.$spacing-xl;
+      border-radius: vars.$border-radius-md;
+      text-align: center;
+    }
+
+    &-title {
+      font-size: vars.$font-xl;
+      color: vars.$success-text;
+      margin-bottom: vars.$spacing-md;
+    }
+
+    &-message {
+      color: color-mix(in srgb, vars.$success-text, black 5%);
+      font-size: vars.$font-md;
+    }
+  }
+}

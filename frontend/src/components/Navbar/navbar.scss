@@ -1,0 +1,71 @@
+@use '../../styles/_variables.scss' as vars;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: vars.$spacing-md vars.$spacing-xl;
+  background-color: vars.$dark-gray;
+  color: vars.$white;
+
+  &-logo {
+    font-size: vars.$font-lg;
+    font-weight: bold;
+
+    &-link {
+      color: vars.$white;
+      text-decoration: none;
+    }
+  }
+
+  &-links {
+    display: flex;
+    align-items: center;
+    gap: vars.$spacing-lg;
+
+    .navbar-link {
+      color: vars.$white;
+      text-decoration: none;
+      padding: vars.$spacing-xs;
+      border-radius: vars.$border-radius-sm;
+      transition: background-color 0.3s;
+      margin-right: vars.$spacing-md;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    .navbar-auth-link {
+      color: vars.$white;
+      text-decoration: none;
+      padding: vars.$spacing-xs vars.$spacing-md;
+      background-color: vars.$primary-color;
+      border-radius: vars.$border-radius-sm;
+      transition: background-color 0.3s;
+      margin-right: vars.$spacing-md;
+
+      &:hover {
+        background-color: color-mix(in srgb, vars.$primary-color, black 10%);
+      }
+    }
+
+    .navbar-auth-button {
+      padding: vars.$spacing-xs vars.$spacing-md;
+      background-color: vars.$danger-color;
+      color: vars.$white;
+      border: none;
+      border-radius: vars.$border-radius-sm;
+      cursor: pointer;
+      margin-left: vars.$spacing-md;
+
+      &:hover {
+        background-color: color-mix(in srgb, vars.$danger-color, black 10%);
+      }
+    }
+
+    .navbar-user-info {
+      margin-right: vars.$spacing-md;
+    }
+  }
+}

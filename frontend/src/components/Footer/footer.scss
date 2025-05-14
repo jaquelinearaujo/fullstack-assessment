@@ -1,0 +1,9 @@
+@use '../../styles/_variables.scss' as vars;
+
+footer {
+  background-color: vars.$dark-gray;
+  color: vars.$white;
+  text-align: center;
+  padding: vars.$spacing-md;
+  margin-top: vars.$spacing-xl;
+}

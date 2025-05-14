@@ -1,0 +1,96 @@
+@use 'variables' as vars;
+
+.login, .register {
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: vars.$spacing-xl;
+  }
+
+  &-form {
+    &-container {
+      width: 100%;
+      max-width: 400px;
+      padding: vars.$spacing-xl;
+      background-color: vars.$white;
+      border-radius: vars.$border-radius-md;
+      box-shadow: vars.$box-shadow;
+    }
+
+    &-title {
+      text-align: center;
+      margin-bottom: vars.$spacing-xl;
+      color: vars.$text-color;
+    }
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+      gap: vars.$spacing-xs;
+      margin-bottom: vars.$spacing-lg;
+    }
+
+    &-label {
+      font-weight: bold;
+      color: color-mix(in srgb, vars.$text-secondary, black 10%);
+    }
+
+    &-input {
+      padding: vars.$spacing-sm;
+      border-radius: vars.$border-radius-sm;
+      border: 1px solid #ddd;
+      font-size: vars.$font-sm;
+
+      &:focus {
+        outline: none;
+        border-color: vars.$secondary-color;
+        box-shadow: 0 0 0 2px rgba(vars.$secondary-color, 0.2);
+      }
+    }
+
+    &-button {
+      padding: vars.$spacing-sm;
+      background-color: vars.$primary-color;
+      color: vars.$white;
+      border: none;
+      border-radius: vars.$border-radius-sm;
+      font-size: vars.$font-sm;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: color-mix(in srgb, vars.$primary-color, black 10%);
+      }
+
+      &:disabled {
+        background-color: color-mix(in srgb, vars.$primary-color, white 20%);
+        cursor: not-allowed;
+      }
+    }
+
+    &-error {
+      background-color: vars.$error-bg;
+      color: vars.$error-text;
+      padding: vars.$spacing-sm;
+      border-radius: vars.$border-radius-sm;
+      margin-bottom: vars.$spacing-md;
+    }
+
+    &-footer {
+      margin-top: vars.$spacing-lg;
+      text-align: center;
+      color: vars.$text-secondary;
+    }
+
+    &-link {
+      color: vars.$primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
