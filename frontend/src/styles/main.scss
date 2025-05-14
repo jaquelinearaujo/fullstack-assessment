@@ -1,0 +1,38 @@
+@use '_variables.scss' as vars;
+@use 'login-register';
+
+@use '../components/Navbar/navbar';
+@use '../components/Footer/footer';
+
+@use '../pages/Home/home';
+@use '../pages/ProductList/product-list';
+@use '../pages/ProductDetail/product-detail';
+@use '../pages/ProductForm/product-form';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f9f9;
+  color: vars.$text-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: vars.$secondary-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  cursor: pointer;
+}
