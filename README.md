@@ -14,12 +14,12 @@ This project is a full-stack application developed as part of a technical challe
 root/
 ├── backend/                # Spring Boot Project
 │   ├── src/                
-│   ├── pom.xml              
+│   ├── pom.xml     
+│   ├── docker-compose.yml  # PostgreSQL Service via Docker         
 ├── frontend/               #  React.js Application
 │   ├── public/
 │   ├── src/
 │   ├── package.json
-├── docker-compose.yml      # PostgreSQL Service via Docker
 └── README.md               # This file
 ```
 
@@ -33,7 +33,12 @@ root/
 - Node.js (version 16+)
 - Docker and Docker Compose
 
-### 1. Start the Database and Run the Backend (Java + Spring Boot)
+### 1. Clone the repository:
+```bash
+git clone https://github.com/jaquelinearaujo/fullstack-assessment.git
+```
+
+### 2. Start the Database and Run the Backend (Java + Spring Boot)
 
 ```bash
 cd backend
