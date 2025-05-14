@@ -58,6 +58,7 @@ public class ProductController {
                 .orElseThrow(() -> new ResourceNotFoundException("Product", "id", id));
 
         var product = productMapper.toEntity(productDetailsDTO);
+        product.setId(id);
 
         var updatedProductDTO = productService.saveProduct(product);
         return new ResponseEntity<>(updatedProductDTO, HttpStatus.OK);
